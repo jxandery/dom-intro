@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Programming</title>
+  </head>
+  <h1>Modifying when code is run</h1>
+
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+  <script>
+    var timeUp = function() {
+      alert('Time is up!');
+    }
+
+    var timeoutId = setTimeout(timeUp, 2000);
+    clearTimeout(timeoutId)
+
+      var counter = 1;
+      var printMessage = function() {
+        console.log("You've been staring at the computer for " + counter + " seconds");
+        counter++
+      }
+
+    var intervalId = setInterval(printMessage, 1000);
+    clearInterval(intervalId)
+  </script>
+  <body>
+
+  </body>
+</html>
+
