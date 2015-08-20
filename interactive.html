@@ -3,7 +3,7 @@
   <head>
     <title>Interactive Programming</title>
   </head>
-  <h1>Modifying when code is run</h1>
+  <h1 id='heading'>Modifying when code is run</h1>
 
   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
@@ -23,6 +23,17 @@
 
     var intervalId = setInterval(printMessage, 1000);
     clearInterval(intervalId)
+
+    var leftOffset = 0;
+    var moveHeading = function() {
+      $("#heading").offset({left: leftOffset});
+      leftOffset += 5;
+      if (leftOffset > 200) {
+        leftOffset = 0;
+      }
+    };
+
+    setInterval(moveHeading, 100);
   </script>
   <body>
 
