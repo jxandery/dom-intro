@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playing with the DOM</title>
+  </head>
+
+  <body>
+    <h1 id="main-heading">Hello world!</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+      friends = ["cindy", "kim", "chris", "jordan", "dan"]
+
+      var headingElement = document.getElementById("main-heading");
+      console.log(headingElement.innerHTML);
+      var newHeadingText = prompt("Please provide a new heading:");
+      headingElement.innerHTML = newHeadingText;
+      $("#main-heading").text(newHeadingText);
+
+      <!--$("body").append("<p>This is a new paragraph</p>");-->
+      <!--for (var i = 0; i < 3; i++) {-->
+        <!--var hobby = prompt("Tell me one of your hobbies!");-->
+        <!--$("body").append("<p>" + hobby + "</p>");-->
+      <!--}-->
+      for (var i = 0; i < 5; i++) {
+      $("h1").fadeOut(i*500).fadeIn(i*500);
+      }
+
+      for (i = 0; i < friends.length; i++) {
+        $("body").append("<p>" + friends[i] + "</p>");
+        $("p").hide(1000).fadeIn(1000);
+      }
+      $("p").append(" smells!");
+      $("h1").fadeTo(2000, 0.1);
+
+    </script>
+
+
+  </body>
+</html>
+
